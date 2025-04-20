@@ -515,5 +515,32 @@ The valid AP entry is updated. This AP is already managed, to update the managed
 
 ```
 </details>
+<details>
+<summary>dhcpsnoopingbinding</summary>
+
+```shell
+//config模式下
+ip dhcp snooping enable
+ip dhcp snooping binding enable
+//端口下
+Interface Ethernet1/0/11
+ switchport access vlan 10
+ ip dhcp snooping binding user-control
+!
+Interface Ethernet1/0/12
+ switchport access vlan 20
+ ip dhcp snooping binding user-control
+```
+</details>
+<details>
+<summary>DHCP中继</summary>
+
+```shell
+//config模式下
+ip forward-protocol udp bootps //允许udp数据通过
+//端口下
+ip helper-address dhcp服务地址也可以是对端端口地址
+例如：
+</details>
 
 
