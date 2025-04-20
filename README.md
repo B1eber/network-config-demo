@@ -539,8 +539,9 @@ Interface Ethernet1/0/12
 //config模式下
 ip forward-protocol udp bootps //允许udp数据通过
 //端口下
-ip helper-address dhcp服务地址也可以是对端端口地址
-例如：
+ip helper-address dhcp  //服务地址也可以是对端端口地址
+如果要有中继情况下在加上DHCPsnoopingbinding则需要在链接端dhcp的端口上加上：
+ip dhcp snooping trust //信任
 </details>
 
 
